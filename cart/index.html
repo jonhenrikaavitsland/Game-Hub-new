@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your order summary and checkout! The universe of games, by Game Hub!">
+    <title>Game Hub | Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@400;500;600&family=Teko:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/assets.css">
+    <script src="https://kit.fontawesome.com/697b06ab02.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="hdr-1"><img src="../images/logo-unchecked.png" alt="Game Hub Logo" class="gh-logo"></a>
+      <p class ='hdr-5'><a href="../account/" class="active on-hover">Sign in / Register</a><a href="../cart/" class="active on-hover">Cart (<span class="add-fancy">1</span>)</a><a href="../account/" class="active on-hover">Account</a></p>
+    </header>
+    <main>
+      <p class="breadcrumb marg-start"><a href="../index.html">Home</a> > <span class="add-fancy">Cart</span></p>
+    <section>
+      <h1 class="marg-start">Cart:</h1>
+      <div class="checkout-container">
+        <div class="cart-container marg-start">
+          <div>
+            <img src="../images/covers/assassin_468-600.jpg" alt="cover image of the game called assassin" class="checkout-img">
+          </div>
+          <div class="title-container">
+            <p class="add-blue titles give-margin-null">Assassin</p>
+            <a href="../games/" class="add-blue cc-1">Remove</a>
+          </div>
+          <div>
+            <p class="add-blue prices give-margin-null">€ 25.99</p>
+          </div>
+        </div>
+        <div class="marg-start price-info">
+          <p>Original price: <span>€ 25.99</span></p>
+          <p>Discount: <span>-5.20</span></p>
+          <strong>Your price: <span class="add-fancy">€ 20.79</span></strong>
+        </div>
+      </div>
+    </section>
+    <section class="sec-checkout">
+      <div class="pay-heading-container">
+        <h2>Pay by CreditCard</h2>
+        <div class="pay-logo">
+          <img src="../images/vbm_elec_pos_blu_2021.png" alt="logo visa" class="pay-1">
+          <img src="../images/mc_symbol_opt_73_3x.png" alt="logo mastercard" class="pay-2">
+        </div>
+      </div>
+      <form action="../cart/success/" class="marg-start checkout-frm">
+        <div>
+          <label for="name">Name of the card holder:</label>
+          <input type="text" name="name" id="name" required placeholder="Name as on the card" class="form__input tbl-1 form-hover">
+        </div>
+        <div>
+          <label for="card">Card number:</label>
+          <input type="tel" name="card" id="card" minlength="16" maxlength="16" required placeholder="16 numbers" class="form__input tbl-1 form-hover">
+        </div>
+        <p class="give-margin-null">Expiration date:</p>
+        <div class="exp-ccv-container">
+          <div class="month-year-container ecc-1">
+            <div>
+              <label for="month">Month:</label>
+            </div>
+            <div>
+              <label for="year">Year:</label>
+            </div>
+          </div>
+          <div class="options-container ecc-2">
+            <select name="month" id="month" class="form-hover">
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select name="year" id="year" class="form-hover">
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+            </select>
+          </div>
+          <div class="ecc-3">
+            <label for="ccv">ccv:</label>
+          </div>
+          <div class="ecc-4">
+            <input type="tel" name="ccv" id="ccv" required minlength="3" maxlength="3" placeholder="123" class="form__input ccv form-hover">
+          </div>
+        </div>
+        <input type="submit" value="PAY NOW" class="cta-checkout">
+      </form>
+      <div class=hide-me>
+        <img src="../images/vbm_elec_pos_blu_2021.png" alt="logo visa" class="pay-3">
+        <img src="../images/mc_symbol_opt_73_3x.png" alt="logo mastercard" class="pay-4">
+        <div class="checkout-info">
+          <p class="add-h2">Your payment is:</p>
+          <ul>
+            <li>Fast</li>
+            <li>Secure</li>
+            <li>Flexible</li>
+            <li>Convenient</li>
+          </ul>
+          <p>€ 20.79 This is your total amount charged to your card. The charge will show on your card statement as <span class="ghub">"ghub"</span></p>
+        </div>
+      </div>
+    </section>
+    </main>
+    <footer>
+      <div class="ft-6">
+        &copy; Game Hub
+      </div>
+    </footer>
+  </body>
+
+</html>
