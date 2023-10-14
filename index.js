@@ -1,14 +1,14 @@
-import { getTitles } from "./js/fetch/fetch.js";
-import { renderTitles } from "./js/render/title.js";
+import {
+  titles,
+  getNewReleases,
+  getGamesList,
+  addOneToTrendingNow,
+} from "./js/data/data.js";
 
-// data from API response saved to the variable as an array of objects
-let titles = await getTitles();
+let newReleases = getNewReleases(titles);
+let trendingNow = addOneToTrendingNow();
+let gamesList = getGamesList(titles);
 
-//
-//
-//
-
-const parent = document.querySelector(".new-releases-container");
-
-renderTitles(titles, parent);
-console.log(titles);
+console.log(newReleases);
+console.log(trendingNow);
+console.log(gamesList);
