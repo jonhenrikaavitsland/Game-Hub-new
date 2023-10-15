@@ -3,8 +3,6 @@ import { clearReleaseList, renderReleases } from "../js/render/TitleLists.js";
 
 export let gamesList = getGamesList(titles);
 
-console.log(gamesList);
-
 // ============== //
 
 const parentGamesList = document.querySelector(".games-container");

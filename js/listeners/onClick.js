@@ -1,4 +1,4 @@
-export function onClickExplore(event) {
+export function onClickExplore() {
   const target = "./../../games/title/";
   window.location.href = target;
 }
