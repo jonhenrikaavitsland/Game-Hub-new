@@ -4,7 +4,7 @@ import {
   getGamesList,
   addOneToTrendingNow,
 } from "./js/data/data.js";
-import { renderReleases, clearReleaseList } from "./js/render/newReleases.js";
+// import { renderReleases, clearReleaseList } from "./js/render/newReleases.js";
 
 export let newReleases = getNewReleases(titles);
 export let trendingNow = addOneToTrendingNow();
