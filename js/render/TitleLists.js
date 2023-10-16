@@ -1,3 +1,4 @@
+// the code on this page is rendering html
 export function renderRelease(release, parentElement) {
   const releaseHtml = createHtmlObject(release);
   parentElement.append(releaseHtml);

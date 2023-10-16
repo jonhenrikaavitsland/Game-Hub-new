@@ -9,6 +9,7 @@ const id = params.get("id");
 // url for fetching title details
 const url = "https://api.noroff.dev/api/v1/gamehub/" + id;
 
+// fetching title for title page and rendering the html
 async function fetchTitle() {
   try {
     const response = await fetch(url);
@@ -22,9 +23,9 @@ async function fetchTitle() {
     titleContainer.innerHTML = message("error", error);
   }
 }
-
 fetchTitle();
 
+// the html to render
 function createHTML(details) {
   titleContainer.innerHTML = `<div>
                                 <img src="${
