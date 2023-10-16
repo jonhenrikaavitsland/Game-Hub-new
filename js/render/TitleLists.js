@@ -1,5 +1,3 @@
-import { onClickExplore } from "../listeners/onClick.js";
-
 export function renderRelease(release, parentElement) {
   const releaseHtml = createHtmlObject(release);
   parentElement.append(releaseHtml);
@@ -12,7 +10,7 @@ export function renderReleases(releases, parentElement) {
 }
 
 export function createHtmlObject(release) {
-  const linkUrl = "../../games/title/";
+  const linkUrl = `./../../games/title/?id=${release.id}`;
 
   const element = document.createElement("div");
   element.classList.add("just-center");
@@ -38,10 +36,10 @@ export function createHtmlObject(release) {
   childPElement.innerText = `€ ${release.price}`;
   element.append(childPElement);
 
-  const childA3Element = document.createElement("button");
+  const childA3Element = document.createElement("a");
   childA3Element.classList.add("cta", "cta-explore", "give-margin6-btm");
   childA3Element.innerText = "explore";
-  childA3Element.addEventListener("click", onClickExplore);
+  childA3Element.href = linkUrl;
   element.append(childA3Element);
 
   return element;
