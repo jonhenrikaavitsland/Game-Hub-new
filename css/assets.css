@@ -430,6 +430,7 @@ border-color: var(--light-blue);
   border-color: var(--fancy-green);
 }
 
+.cta-sale,
 .log-in-btn {
   border-color: var(--white-f2);
 }
