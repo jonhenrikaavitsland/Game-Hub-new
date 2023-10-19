@@ -33,7 +33,7 @@ export function getGamesList(titles) {
 function getTrendingNow(titles) {
   let trendingNow = [];
   for (let i = 0; i < titles.length; i++) {
-    if (titles[i].favorite === true) {
+    if (titles[i].favorite) {
       trendingNow.push(titles[i]);
     }
   }
