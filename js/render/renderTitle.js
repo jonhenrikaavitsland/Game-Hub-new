@@ -11,7 +11,7 @@ export function createHTML(details) {
                                 <h1>${details.title}</h1>
                                 <p>Released: ${details.released}</p>
                                 <p>${details.description}</p>
-                                <p>Price: ${details.price}</p>
+                                <p>Price: € ${details.price}</p>
                                 <p>Genre: ${details.genre}</p>
                                 <p>Age rating: ${details.ageRating}</p>
                                 <p><a href="../../account/" class="add-fancy">Login</a> and save € ${
