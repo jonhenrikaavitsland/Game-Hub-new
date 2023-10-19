@@ -1,5 +1,5 @@
-import { getGamesList, titles } from "../js/data/data.js";
-import { clearReleaseList, renderReleases } from "../js/render/TitleLists.js";
+import { getGamesList, titles } from "../data/data.js";
+import { clearReleaseList, renderReleases } from "../render/TitleLists.js";
 
 export let gamesList = getGamesList(titles);
 

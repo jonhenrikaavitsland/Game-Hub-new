@@ -1,5 +1,5 @@
-import { titles, getNewReleases, addOneToTrendingNow } from "./js/data/data.js";
-import { renderReleases, clearReleaseList } from "./js/render/TitleLists.js";
+import { titles, getNewReleases, addOneToTrendingNow } from "./data/data.js";
+import { renderReleases, clearReleaseList } from "./render/TitleLists.js";
 
 export let newReleases = getNewReleases(titles);
 export let trendingNow = addOneToTrendingNow();

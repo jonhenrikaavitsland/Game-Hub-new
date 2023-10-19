@@ -1,32 +1,7 @@
-// location for rendering html
-const titleContainer = document.querySelector(".title-wrap");
-
-// getting querystring from parent page
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
-
-// url for fetching title details
-const url = "https://api.noroff.dev/api/v1/gamehub/" + id;
-
-// fetching title for title page and rendering the html
-async function fetchTitle() {
-  try {
-    const response = await fetch(url);
-    const details = await response.json();
-
-    console.log(details);
-
-    createHTML(details);
-  } catch (error) {
-    console.log(error);
-    titleContainer.innerHTML = message("error", error);
-  }
-}
-fetchTitle();
+import { title, titleContainer } from "../games/title/index.js";
 
 // the html to render
-function createHTML(details) {
+export function createHTML(details) {
   titleContainer.innerHTML = `<div>
                                 <img src="${
                                   details.image
@@ -48,4 +23,5 @@ function createHTML(details) {
                                 }</p>
                                 <button class="cta cta-sale">ADD <i class="fa-solid fa-cart-plus add-fancy"></i></button>
                               </section>`;
+  title.innerHTML = `Game Hub | ${details.title}`;
 }
