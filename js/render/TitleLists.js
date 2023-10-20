@@ -28,18 +28,18 @@ export function createHtmlObject(release) {
 
   const childA2Element = document.createElement("a");
   childA2Element.classList.add("titles");
-  childA2Element.innerText = `${release.title}`;
+  childA2Element.textContent = `${release.title}`;
   childA2Element.href = linkUrl;
   element.append(childA2Element);
 
   const childPElement = document.createElement("p");
   childPElement.classList.add("prices");
-  childPElement.innerText = `€ ${release.price}`;
+  childPElement.textContent = `€ ${release.price}`;
   element.append(childPElement);
 
   const childA3Element = document.createElement("a");
   childA3Element.classList.add("cta", "cta-explore", "give-margin6-btm");
-  childA3Element.innerText = "explore";
+  childA3Element.textContent = "explore";
   childA3Element.href = linkUrl;
   element.append(childA3Element);
 
