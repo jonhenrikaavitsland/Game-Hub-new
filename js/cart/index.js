@@ -1,3 +1,4 @@
 import { updateCartLink } from "../localStorage/cartLink.js";
 
-updateCartLink();
+const gameKeys = updateCartLink();
+console.log(gameKeys);

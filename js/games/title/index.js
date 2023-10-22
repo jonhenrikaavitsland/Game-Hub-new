@@ -36,15 +36,14 @@ export async function fetchTitle() {
 const game = await fetchTitle();
 console.log(game);
 
-// the following is a test to work with local storage
 
 export const titleButton = document.querySelector(".cta-sale");
 
 export const gameKey = game.id;
 export const gameValue = game.title;
 
-updateCartLink();
-checkToUpdateButton();
-titleButton.addEventListener("click", buttonRedirect);
-titleButton.addEventListener("click", buttonAction);
+updateCartLink();  // updates the cart link in the top of the page
+checkToUpdateButton(); // updates button to a link if game was already added to the cart.
+titleButton.addEventListener("click", buttonRedirect); // converts to link if condition is met.
+titleButton.addEventListener("click", buttonAction); // adds game to cart and updates button + cart link
 

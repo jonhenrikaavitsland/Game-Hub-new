@@ -13,4 +13,5 @@ export function updateCartLink() {
   }
   console.log(gameKeys);
   cartLink.innerHTML = gameKeys.length;
+  return gameKeys;
 }
