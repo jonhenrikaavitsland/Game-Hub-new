@@ -1,4 +1,10 @@
 import { createHTML } from "./../../render/renderTitle.js";
+import {
+  checkToUpdateButton,
+  buttonAction,
+  buttonRedirect,
+} from "./../../listeners/titleButton.js";
+import { updateCartLink } from "./../../localStorage/cartLink.js";
 
 // location for rendering html
 export const titleContainer = document.querySelector(".title-wrap");
@@ -26,5 +32,19 @@ export async function fetchTitle() {
   }
 }
 
+// An object containing title details.
 const game = await fetchTitle();
 console.log(game);
+
+// the following is a test to work with local storage
+
+export const titleButton = document.querySelector(".cta-sale");
+
+export const gameKey = game.id;
+export const gameValue = game.title;
+
+updateCartLink();
+checkToUpdateButton();
+titleButton.addEventListener("click", buttonRedirect);
+titleButton.addEventListener("click", buttonAction);
+
