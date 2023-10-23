@@ -148,6 +148,14 @@ nav a {
   opacity: 0.85;
 }
 
+.cart-a {
+  position: relative;
+}
+
+.cart-link {
+  position: absolute;
+}
+
 
 
 /*

@@ -12,6 +12,6 @@ export function updateCartLink() {
     }
   }
   console.log(gameKeys);
-  cartLink.innerHTML = gameKeys.length;
+  cartLink.textContent = gameKeys.length;
   return gameKeys;
 }
