@@ -1,18 +1,17 @@
-import { titles, getNewReleases, addOneToTrendingNow } from "./data/data.js";
-import { renderReleases, clearReleaseList } from "./render/TitleLists.js";
-import { updateCartLink } from "./localStorage/cartLink.js";
+import { gamesPage } from "./pages/games.js";
+import { RenderNewReleases, RenderTrendingNow } from "./pages/home.js";
+import { titlePage } from "./pages/title.js";
 
-export let newReleases = getNewReleases(titles);
-export let trendingNow = addOneToTrendingNow();
+console.log(location.pathname);
 
-// ================== //
-const parentNewReleases = document.querySelector(".new-releases-container");
-const parentTrendingNow = document.querySelector(".trending-container");
-
-clearReleaseList(parentNewReleases);
-renderReleases(newReleases, parentNewReleases);
-
-clearReleaseList(parentTrendingNow);
-renderReleases(trendingNow, parentTrendingNow);
-
-updateCartLink();
+if (location.pathname === "/games/") {
+  gamesPage();
+} else if (location.pathname === "/title/") {
+  titlePage();
+} else if (location.pathname === "/cart/") {
+  // fetch games
+  // render games
+} else {
+  RenderNewReleases();
+  RenderTrendingNow();
+}
