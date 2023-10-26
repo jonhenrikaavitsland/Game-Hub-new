@@ -1,3 +1,3 @@
-import { updateCartLink } from "./../localStorage/cartLink.js";
+// import { updateCartLink } from "./../localStorage/cartLink.js";
 
-updateCartLink();
+// updateCartLink();

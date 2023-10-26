@@ -1,14 +1,14 @@
-import { getGamesList, titles } from "../data/data.js";
-import { clearReleaseList, renderReleases } from "../render/TitleLists.js";
-import { updateCartLink } from "../localStorage/cartLink.js";
+// import { getGamesList, titles } from "../data/data.js";
+// import { clearReleaseList, renderReleases } from "../render/TitleLists.js";
+// import { updateCartLink } from "../localStorage/cartLink.js";
 
-export let gamesList = getGamesList(titles);
+// export let gamesList = getGamesList(titles);
 
-// ============== //
+// // ============== //
 
-const parentGamesList = document.querySelector(".games-container");
+// const parentGamesList = document.querySelector(".games-container");
 
-clearReleaseList(parentGamesList);
-renderReleases(gamesList, parentGamesList);
+// clearReleaseList(parentGamesList);
+// renderReleases(gamesList, parentGamesList);
 
-updateCartLink();
+// updateCartLink();
