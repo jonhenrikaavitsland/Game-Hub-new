@@ -2,6 +2,8 @@ import { gamesPage } from "./pages/games.js";
 import { RenderNewReleases, RenderTrendingNow } from "./pages/home.js";
 import { titlePage } from "./pages/title.js";
 
+
+
 switch (location.pathname) {
   case "/index.html":
     RenderNewReleases();
