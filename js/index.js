@@ -7,15 +7,14 @@ switch (location.pathname) {
     RenderNewReleases();
     RenderTrendingNow();
     break;
-  case "/games/":
-    gamesPage();
-    break;
   case "/games/title/":
     titlePage();
     break;
+  case "/games/":
+    gamesPage();
+    break;
   case "/cart/":
     break;
-  default:
 }
 
 // if (location.pathname === "/index.html") {
