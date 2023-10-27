@@ -14,24 +14,6 @@ switch (location.pathname) {
     gamesPage();
     break;
   case "/cart/":
+    // To do!
     break;
 }
-
-// if (location.pathname === "/index.html") {
-//   RenderNewReleases();
-//   RenderTrendingNow();
-// }
-
-// if (location.pathname === "/games/") {
-//   gamesPage();
-// }
-
-// if (location.pathname === "/games/title/") {
-//   titlePage();
-// }
-
-// if (location.pathname === "/cart/") {
-//   // fetch games
-//   // render games
-// }
-
