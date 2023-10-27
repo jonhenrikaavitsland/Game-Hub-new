@@ -1,5 +1,4 @@
 import { createHTML } from "./../render/renderTitle.js";
-import { updateCartLink } from "../localStorage/cartLink.js";
 
 // location for rendering html
 export const titleContainer = document.querySelector(".title-wrap");
@@ -27,10 +26,6 @@ export async function fetchTitle() {
   }
 }
 
-// An object containing title details.
-const game = fetchTitle();
-
-export const gameKey = game.id;
-export const gameValue = game.title;
-
-export async function titlePage() {}
+export async function titlePage() {
+  fetchTitle();
+}
