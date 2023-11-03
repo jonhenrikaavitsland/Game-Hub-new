@@ -10,7 +10,7 @@ switch (location.pathname) {
   case "/index.html":
     createHome();
     break;
-  case "/#":
+  case "#":
     createHome();
     break;
   case "/games/title/":
