@@ -13,5 +13,10 @@ export async function createTitle() {
     const newUrl = url + `/${id}`;
     const game = await getData(newUrl);
     createHTML(game);
-  } catch (error) {}
+  } catch (error) {
+    console.log("An error occurred", error);
+    titleContainer.innerHTML = displayError(
+      "An error occurred, try again later or contact customer service if error persist"
+    );
+  }
 }
