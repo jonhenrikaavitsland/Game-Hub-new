@@ -5,7 +5,6 @@ import { button } from "./listeners/button.js";
 import { updateCartLink } from "./localStorage/updateCartLink.js";
 
 export const keys = await updateCartLink();
-console.log(keys);
 
 switch (location.pathname) {
   case "/games/title/":

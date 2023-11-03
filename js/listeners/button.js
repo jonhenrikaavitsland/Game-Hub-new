@@ -14,7 +14,6 @@ export async function button() {
 
   let gameKey = findKey(game);
   let gameValue = findValue(game);
-  console.log(gameKey, gameValue);
 
   // redirects if the button has changed
   function buttonRedirect() {
@@ -37,7 +36,6 @@ export async function button() {
     }
   }
 
-  console.log(titleButton);
   checkToUpdateButton();
   titleButton.addEventListener("click", buttonRedirect);
   titleButton.addEventListener("click", buttonAction);
