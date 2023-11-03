@@ -1,7 +1,7 @@
-import { titleContainer, title } from "./../pages/title.js";
+// import { titleContainer, title } from "./../pages/title.js";
 
 // the html to render
-export function createHTML(details) {
+function createHTML(details) {
   titleContainer.innerHTML = `<div>
                                 <img src="${
                                   details.image

@@ -1,16 +1,16 @@
 // the code on this page is rendering html
-export function renderRelease(release, parentElement) {
+function renderRelease(release, parentElement) {
   const releaseHtml = createHtmlObject(release);
   parentElement.append(releaseHtml);
 }
 
-export function renderReleases(releases, parentElement) {
+function renderReleases(releases, parentElement) {
   releases.forEach(function (release) {
     renderRelease(release, parentElement);
   });
 }
 
-export function createHtmlObject(release) {
+function createHtmlObject(release) {
   const linkUrl = `./../../games/title/?id=${release.id}`;
 
   const element = document.createElement("div");
@@ -46,6 +46,6 @@ export function createHtmlObject(release) {
   return element;
 }
 
-export function clearReleaseList(parentElement) {
+function clearReleaseList(parentElement) {
   parentElement.innerHTML = "";
 }

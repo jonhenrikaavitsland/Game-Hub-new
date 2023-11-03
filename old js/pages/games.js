@@ -1,10 +1,10 @@
-import { getGamesList, titles } from "../data/data.js";
-import { clearReleaseList, renderReleases } from "../render/renderLists.js";
+// import { getGamesList, titles } from "../data/data.js";
+// import { clearReleaseList, renderReleases } from "../render/renderLists.js";
 
-export const parentGamesList = document.querySelector(".games-container");
+const parentGamesList = document.querySelector(".games-container");
 let gamesList = getGamesList(titles);
 
-export function gamesPage() {
+function gamesPage() {
   try {
     clearReleaseList(parentGamesList);
     renderReleases(gamesList, parentGamesList);
@@ -15,4 +15,3 @@ export function gamesPage() {
     ); // i cant get this error handling to work properly
   }
 }
-

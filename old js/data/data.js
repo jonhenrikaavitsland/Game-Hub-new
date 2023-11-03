@@ -1,16 +1,15 @@
-import { getTitles } from "./fetch.js";
-import { displayError } from "./../error/displayError.js";
+// import { getTitles } from "./fetch.js";
+// import { displayError } from "./../error/displayError.js";
 
 const container1 = document.querySelector(".new-releases-container");
 const container2 = document.querySelector(".trending-container");
 // const container3 = document.querySelector(".games-container");
 
 // data from API response saved to the variable as an array of objects
-export let titles = await getTitles();
-
+let titles = await getTitles();
 
 // Extracting titles released after 2008
-export function getNewReleases(titles) {
+function getNewReleases(titles) {
   let newReleases = [];
   for (let i = 0; i < titles.length; i++) {
     if (titles[i].released >= 2008) {
@@ -23,7 +22,7 @@ export function getNewReleases(titles) {
 }
 
 // Creates the final list of games to display on the list of games page.
-export function getGamesList(titles) {
+function getGamesList(titles) {
   let gamesList = [];
   for (let i = 0; i < titles.length; i++) {
     gamesList.push(titles[i]);
@@ -47,7 +46,7 @@ function getTrendingNow(titles) {
 }
 
 // Because only three games are favorites and we need four at desktop screen size, we add one from our newly created array just to make the page look nice for this CA.
-export function addOneToTrendingNow() {
+function addOneToTrendingNow() {
   let trendingNow = getTrendingNow(titles);
 
   // for (let i = 0; i < trendingNow.length; i++) {} // i realized this didn't do anything.

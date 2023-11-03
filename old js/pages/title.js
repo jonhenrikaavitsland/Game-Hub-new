@@ -1,22 +1,22 @@
-import { fetchTitle } from "../data/fetchTitle.js";
-import { titleSpecific } from "../data/fetchTitle.js";
-import { updateCartLink } from "../localStorage/cartLink.js";
+// import { fetchTitle } from "../data/fetchTitle.js";
+// import { titleSpecific } from "../data/fetchTitle.js";
+// import { updateCartLink } from "../localStorage/cartLink.js";
 
 // location for rendering html
-export const titleContainer = document.querySelector(".title-wrap");
-export const title = document.querySelector("title");
+const titleContainer = document.querySelector(".title-wrap");
+const title = document.querySelector("title");
 
 // getting querystring from parent page
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-export const id = params.get("id");
+const id = params.get("id");
 
 // url for fetching title details
-export const url = "https://api.noroff.dev/api/v1/gamehub/" + id;
+const url = "https://api.noroff.dev/api/v1/gamehub/" + id;
 
 // this code runs when entering title page, it also holds functions that works with the button element on the page.
 // I found that I had to include it all inside this function to run it without errors.
-export async function titlePage() {
+async function titlePage() {
   await fetchTitle();
   const titleButton = document.querySelector(".cta-sale");
 

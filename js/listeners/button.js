@@ -2,9 +2,7 @@ import { getId } from "../data/getId.js";
 import { url } from "../data/constants.js";
 import { getData } from "../data/fetchAPI.js";
 import { findKey, findValue } from "../localStorage/findVariables.js";
-import { checkToUpdateButton } from "../localStorage/checkToUpdateButton.js";
-import { buttonRedirect } from "./buttonRedirect.js";
-import { buttonAction } from "../localStorage/buttonAction.js";
+import { updateCartLink } from "../localStorage/updateCartLink.js";
 
 export async function button() {
   const id = getId();
@@ -16,16 +14,31 @@ export async function button() {
 
   let gameKey = findKey(game);
   let gameValue = findValue(game);
-  console.log(titleButton);
-  checkToUpdateButton(titleButton, gameKey, updatedButton);
-  titleButton.addEventListener(
-    "click",
-    buttonRedirect(titleButton, updatedButton) // buttonRedirect can not run titlebutton and updatedbutton from here.
-  );
-  titleButton.addEventListener(
-    "click",
-    buttonAction(gameKey, gameValue, titleButton, updatedButton) // buttonAction same as above
-  );
-}
+  console.log(gameKey, gameValue);
 
-// fix updateCart
+  // redirects if the button has changed
+  function buttonRedirect() {
+    if (titleButton.innerHTML === updatedButton) {
+      location.href = "../../games/";
+    }
+  }
+
+  // adds the title to local storage, then updates the button and cart link in the top.
+  function buttonAction() {
+    localStorage.setItem(gameKey, gameValue);
+    checkToUpdateButton();
+    updateCartLink();
+  }
+
+  // updates the buttons textContent if the games title has been stored in localStorage as a value.
+  function checkToUpdateButton() {
+    if (localStorage.getItem(gameKey)) {
+      titleButton.textContent = updatedButton;
+    }
+  }
+
+  console.log(titleButton);
+  checkToUpdateButton();
+  titleButton.addEventListener("click", buttonRedirect);
+  titleButton.addEventListener("click", buttonAction);
+}

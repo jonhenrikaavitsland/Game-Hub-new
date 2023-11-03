@@ -1,11 +1,11 @@
-import { titleContainer, url } from "../pages/title.js";
-import { createHTML } from "./../render/renderTitle.js";
-import { displayError } from "../error/displayError.js";
+// import { titleContainer, url } from "../pages/title.js";
+// import { createHTML } from "./../render/renderTitle.js";
+// import { displayError } from "../error/displayError.js";
 
-export let titleSpecific;
+let titleSpecific;
 
 // fetching title for title page and rendering the html
-export async function fetchTitle() {
+async function fetchTitle() {
   try {
     const response = await fetch(url);
     const details = await response.json();
