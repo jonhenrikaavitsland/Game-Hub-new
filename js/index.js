@@ -10,7 +10,7 @@ switch (location.pathname) {
   case "/index.html":
     createHome();
     break;
-  case "/gamehub-with-js.netlify.app/":
+  case "/#":
     createHome();
     break;
   case "/games/title/":
