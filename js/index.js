@@ -4,9 +4,15 @@ import { createTitle } from "./pages/title.js";
 import { button } from "./listeners/button.js";
 import { updateCartLink } from "./localStorage/updateCartLink.js";
 
-export const keys = await updateCartLink();
+updateCartLink();
 
 switch (location.pathname) {
+  case "/index.html":
+    createHome();
+    break;
+  case "/gamehub-with-js.netlify.app/":
+    createHome();
+    break;
   case "/games/title/":
     createTitle();
     setTimeout(button, 500); // lower the timer and consider if there is a better option than setTimeout()
@@ -17,6 +23,4 @@ switch (location.pathname) {
   case "/cart/":
     // To do!
     break;
-  default:
-    createHome();
 }
