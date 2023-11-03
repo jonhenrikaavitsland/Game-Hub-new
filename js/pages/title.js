@@ -3,8 +3,6 @@ import { url } from "../data/constants.js";
 import { getData } from "../data/fetchAPI.js";
 import { createHTML } from "../render/renderTitle.js";
 
-const titleButton = document.querySelector(".cta-sale");
-
 // location for rendering html
 export const titleContainer = document.querySelector(".title-wrap");
 export const title = document.querySelector("title");
