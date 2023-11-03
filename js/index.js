@@ -1,21 +1,19 @@
-import { updateCartLink } from "./localStorage/cartLink.js";
-import { gamesPage } from "./pages/games.js";
-import { RenderNewReleases, RenderTrendingNow } from "./pages/home.js";
-import { titlePage } from "./pages/title.js";
-
-updateCartLink();
+import { createHome } from "./pages/home.js";
+import { createGames } from "./pages/games.js";
+import { createTitle } from "./pages/title.js";
+import { button } from "./listeners/button.js";
 
 switch (location.pathname) {
   case "/games/title/":
-    titlePage();
+    createTitle();
+    setTimeout(button, 5000);
     break;
   case "/games/":
-    gamesPage();
+    createGames();
     break;
   case "/cart/":
     // To do!
     break;
   default:
-    RenderNewReleases();
-    RenderTrendingNow();
+    createHome();
 }

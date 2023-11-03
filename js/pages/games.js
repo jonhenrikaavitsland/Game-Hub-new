@@ -1,18 +1,21 @@
-import { getGamesList, titles } from "../data/data.js";
+import { getData } from "../data/fetchAPI.js";
+import { getGamesList } from "../data/getGamesList.js";
 import { clearReleaseList, renderReleases } from "../render/renderLists.js";
+import { displayError } from "../error/displayError.js";
+import { url } from "../data/constants.js";
 
-export const parentGamesList = document.querySelector(".games-container");
-let gamesList = getGamesList(titles);
+const parentGames = document.querySelector(".games-container");
 
-export function gamesPage() {
+export async function createGames() {
   try {
-    clearReleaseList(parentGamesList);
-    renderReleases(gamesList, parentGamesList);
+    const titles = await getData(url);
+    const gamesList = getGamesList(titles);
+    clearReleaseList(parentGames);
+    renderReleases(gamesList, parentGames);
   } catch (error) {
     console.log("An error occurred", error);
-    parentGamesList.innerHTML = displayError(
+    parentGames.innerHTML = displayError(
       "An error occurred, try again later or contact customer service if error persist"
-    ); // i cant get this error handling to work properly
+    );
   }
 }
-

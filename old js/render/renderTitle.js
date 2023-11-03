@@ -1,4 +1,4 @@
-import { titleContainer } from "../pages/title.js";
+import { titleContainer, title } from "./../pages/title.js";
 
 // the html to render
 export function createHTML(details) {
