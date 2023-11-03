@@ -31,7 +31,7 @@ export async function titlePage() {
       gameKey = titleSpecific.id;
       gameValue = titleSpecific.title;
     } catch (error) {
-      console.log(error);
+      console.log("An error occurred", error);
     }
   }
 

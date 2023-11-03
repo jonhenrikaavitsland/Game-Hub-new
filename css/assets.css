@@ -156,6 +156,13 @@ nav a {
   position: absolute;
 }
 
+.error {
+  border: 1px solid rgb(246, 52, 52);
+  padding: 1rem;
+  color: rgb(246, 52, 52);
+  background: #fff;
+  grid-column: 1 / -1;
+}
 
 
 /*

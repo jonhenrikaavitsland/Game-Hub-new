@@ -1,4 +1,3 @@
-import { fetchTitle } from "./data/fetchTitle.js";
 import { updateCartLink } from "./localStorage/cartLink.js";
 import { gamesPage } from "./pages/games.js";
 import { RenderNewReleases, RenderTrendingNow } from "./pages/home.js";

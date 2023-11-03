@@ -1,7 +1,13 @@
 import { getTitles } from "./fetch.js";
+import { displayError } from "./../error/displayError.js";
+
+const container1 = document.querySelector(".new-releases-container");
+const container2 = document.querySelector(".trending-container");
+// const container3 = document.querySelector(".games-container");
 
 // data from API response saved to the variable as an array of objects
 export let titles = await getTitles();
+
 
 // Extracting titles released after 2008
 export function getNewReleases(titles) {

@@ -1,5 +1,6 @@
 import { titleContainer, url } from "../pages/title.js";
 import { createHTML } from "./../render/renderTitle.js";
+import { displayError } from "../error/displayError.js";
 
 export let titleSpecific;
 
@@ -9,11 +10,13 @@ export async function fetchTitle() {
     const response = await fetch(url);
     const details = await response.json();
 
-    createHTML(details);
-    titleSpecific = details;
+    createHTML(details); // renders the html for the title page.
+    titleSpecific = details; // updates title element on the specific title page
     return details;
   } catch (error) {
-    console.log(error);
-    titleContainer.innerHTML = message("error", error);
+    console.log("An error occurred", error);
+    titleContainer.innerHTML = displayError(
+      "An error occurred when fetching game details, please try again later or contact customer service if the error persists"
+    );
   }
 }
