@@ -7,10 +7,6 @@ import { titlePage } from "./pages/title.js";
 updateCartLink();
 
 switch (location.pathname) {
-  case "/index.html":
-    RenderNewReleases();
-    RenderTrendingNow();
-    break;
   case "/games/title/":
     titlePage();
     break;
@@ -20,4 +16,7 @@ switch (location.pathname) {
   case "/cart/":
     // To do!
     break;
+  default:
+    RenderNewReleases();
+    RenderTrendingNow();
 }
