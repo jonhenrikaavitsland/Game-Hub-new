@@ -15,3 +15,4 @@ export function updateCartLink() {
   cartLink.textContent = gameKeys.length;
   return gameKeys;
 }
+ 
