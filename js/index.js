@@ -17,6 +17,12 @@ switch (location.pathname) {
   case "/cart/":
     // To do!
     break;
+  case "/about/":
+    // nothing here
+    break;
+  case "/contact/":
+    // nothing here
+    break;
   default:
     createHome();
     break;
