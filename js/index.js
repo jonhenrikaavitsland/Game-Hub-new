@@ -7,12 +7,6 @@ import { updateCartLink } from "./localStorage/updateCartLink.js";
 updateCartLink();
 
 switch (location.pathname) {
-  case "/index.html":
-    createHome();
-    break;
-  case "":
-    createHome();
-    break;
   case "/games/title/":
     createTitle();
     setTimeout(button, 500); // lower the timer and consider if there is a better option than setTimeout()
@@ -22,5 +16,8 @@ switch (location.pathname) {
     break;
   case "/cart/":
     // To do!
+    break;
+  default:
+    createHome();
     break;
 }
