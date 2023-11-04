@@ -3,19 +3,20 @@ import { createGames } from "./pages/games.js";
 import { createTitle } from "./pages/title.js";
 import { button } from "./listeners/button.js";
 import { updateCartLink } from "./localStorage/updateCartLink.js";
+import { createCart } from "./pages/cart.js";
 
 updateCartLink();
 
 switch (location.pathname) {
   case "/games/title/":
     createTitle();
-    setTimeout(button, 500); // lower the timer and consider if there is a better option than setTimeout()
+    setTimeout(button, 300);
     break;
   case "/games/":
     createGames();
     break;
   case "/cart/":
-    // To do!
+    createCart();
     break;
   case "/about/":
     // nothing here

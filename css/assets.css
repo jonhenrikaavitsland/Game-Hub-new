@@ -1022,26 +1022,29 @@ figure {
 16. Checkout page
 =================
 */
-.checkout-img {
-  max-width: 80%;
-  margin: 1rem 1rem;
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
 }
 
-.cart-container {
-  border-radius: 0.5rem;
-  display: grid;
-  grid-template-columns: 40% 30% 30%;
+.cart-content {
+  background-color: var(--white-f2);
+  color: var(--dark-blue);
+  display: flex;
+  border-radius: 5px;
 }
 
-.title-container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+.cart-content section {
+  margin-left: 10px;
 }
 
-.cc-1 {
-  align-self: end;
-  margin-bottom: 1rem;
+.cart-img {
+  max-height: 100px;
+  border-radius: 5px 0 0 5px;
 }
+
 
 .pay-heading-container {
   display: grid;
