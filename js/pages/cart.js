@@ -42,8 +42,6 @@ export function createInnerCart() {
   `;
 }
 
-console.log(cartContent);
-
 export function createCart() {
   createCartContent();
   setTimeout(createInnerCart, 1000);
