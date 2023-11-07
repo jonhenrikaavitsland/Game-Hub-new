@@ -1,4 +1,5 @@
 import { titleContainer } from "../pages/title.js";
+import { title } from "../pages/title.js";
 
 // the html to render
 export function createHTML(details) {

@@ -2,6 +2,7 @@ import { getId } from "../data/getId.js";
 import { url } from "../data/constants.js";
 import { getData } from "../data/fetchAPI.js";
 import { createHTML } from "../render/renderTitle.js";
+import { displayError } from "../error/displayError.js";
 
 // location for rendering html
 export const titleContainer = document.querySelector(".title-wrap");
