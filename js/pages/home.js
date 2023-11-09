@@ -21,5 +21,8 @@ export async function createHome() {
     parentTrendingNow.innerHTML = displayError(
       "An error occurred, try again later or contact customer service if error persist"
     );
+    parentNewReleases.innerHTML = displayError(
+      "An error occurred, try again later or contact customer service if error persist"
+    );
   }
 }
